@@ -32,5 +32,34 @@ void main() {
     return value * 2;
   });
 
-  print(newl6);
+  print(newl6.toList());
+
+  //where 把满足条件的返回集合
+  List l99 = [1, 3, 4, 5, 7, 8, 9];
+  var newL99 = l99.where((value) {
+    return value > 5;
+  });
+  print(newL99.toList());
+
+  //any 判断数组里是否有满足条件的数据 有返回true，没有则返回false,有一个满足条件就返回true
+  var f = l99.any((value) {
+    return value > 5;
+  });
+
+  //every 每一个都要满足条件 返回true 否则返回false
+  var n = l99.every((value) {
+    return value > 5;
+  });
+  print(n);
+
+  //循环set
+  var k = new Set();
+  k.addAll([1, 222, 333]);
+  k.forEach((value) => print(value));
+
+  //map forEach
+  Map person = {'name': 'zhang3', 'age': 20};
+  person.forEach((key, value) {
+    print('$key---$value');
+  });
 }

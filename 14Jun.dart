@@ -182,4 +182,55 @@ void main() {
   String str20 = '124.15';
   var myNum10 = double.parse(str10);
   print(myNum10 is double);
+
+  //当 String price 为null
+  String price = '';
+  try {
+    var myNum8 = double.parse(price);
+    print(myNum8);
+
+    print(myNum8 is double);
+  } catch (err) {
+    print(0);
+
+    var myNum13 = 100;
+    var Str = myNum13.toString();
+
+    print(Str is String);
+  }
+
+  //其他类型转换成booleans类型
+
+  //is Empty： 判断字符串是否为空
+
+  var Str2 = '1234';
+  if (Str2.isEmpty) {
+    print('str2 is null');
+  } else {
+    print('str2 is not null');
+  }
+
+  var myNum99 = 123;
+  if (myNum99 == 0) {
+    print('0');
+  } else {
+    print('is not o');
+  }
+
+  var myNum98;
+  if (myNum98 == null) {
+    print('0');
+  } else {
+    print('is not 0');
+  }
+
+  var myNum97 = 0 / 0;
+
+  print(myNum97);
+  //myNum97 = NaN
+  if (myNum97.isNaN) {
+    print('0');
+  } else {
+    print('is not 0');
+  }
 }

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   //for循环
   for (int i = 1; i <= 10; i++) {
@@ -76,6 +78,31 @@ void main() {
     print("-------");
     for (var j = 0; j < newsList[m]["news"].length; j++) {
       print(newsList[m]["news"][j]["title"]);
+    }
+  }
+//o=4时跳过循环
+  for (var o = 1; o <= 10; o++) {
+    if (o == 4) {
+      continue; //表示跳过当前循环体，循环继续执行
+    }
+    print(o);
+  }
+// r=4时跳出循环
+  for (var r = 1; r <= 10; r++) {
+    if (r == 4) {
+      break; //跳出循环
+    }
+    print(r);
+  }
+
+  // break 只能向外跳出一层循环
+  for (var m = 0; m < 5; m++) {
+    print('outside---$m');
+    for (var s = 0; s < 3; s++) {
+      if (s == 1) {
+        break;
+      }
+      print("inside$s");
     }
   }
 }
